@@ -16,3 +16,17 @@ Exécuter
 ```bash
 docker run -it --rm sbtscala/scala-sbt:eclipse-temurin-jammy-${JAVA_VERSION}_${SBT_VERSION}_${SCALA_VERSION}
 ```
+
+```bash
+docker run -it --rm -v ./spark_example/:/spark_exam
+ple/ sbtscala/scala-sbt:eclipse-temurin-jammy-${JAVA_VERSION}_${SBT_VERSION}_${SCALA_VERSION}
+```
+
+Dans le container :
+
+```
+cd /spark_example
+sbt
+compile
+run
+```
